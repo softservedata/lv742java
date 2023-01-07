@@ -1,4 +1,4 @@
-package com.softserve.edu.hm2.p1;
+package com.softserve.edu.hm3.p1;
 
 import java.time.LocalDate;
 import java.util.Scanner;

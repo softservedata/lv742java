@@ -1,4 +1,4 @@
-package com.softserve.edu.hm2.p2;
+package com.softserve.edu.hm3.p2;
 
 import java.util.Scanner;
 
