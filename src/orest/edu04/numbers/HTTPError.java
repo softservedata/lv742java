@@ -1,15 +1,20 @@
 package orest.edu04.numbers;
 
 public enum HTTPError {
-    BAD_REQUEST(400),
-    UNAUTHORIZED(401),
-    PAYMENT_REQUIRED(402),
-    FORBIDDEN(403),
-    NOT_FOUND(404);
+    BAD_REQUEST("Bad request"),
+    UNAUTHORIZED("Unauthorized"),
+    PAYMENT_REQUIRED("Payment required"),
+    FORBIDDEN("Forbidden"),
+    NOT_FOUND("Not found");
 
-    final int errorCode;
+    final String errorCode;
 
-    HTTPError(int errorCode) {
+    HTTPError(String errorCode) {
         this.errorCode = errorCode;
+    }
+
+    @Override
+    public String toString() {
+        return errorCode;
     }
 }
