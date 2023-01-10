@@ -206,7 +206,7 @@ public class ApplCondition {
         } else {
         	System.out.println("Wrong! 2");
         }
-        //
+        /*
         // Starting from Java 14 we can use switch expression
         var result = switch (input.toLowerCase()) {
             case "yes", "maybe" -> "Great!_3";
@@ -214,6 +214,6 @@ public class ApplCondition {
             default -> "Wrong!_3";
         };
         System.out.println("result = " + result);
-        // */
+        */
     }
 }

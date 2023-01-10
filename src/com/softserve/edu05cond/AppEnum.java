@@ -189,7 +189,7 @@ public class AppEnum {
             System.out.println("September, October, November");
             break;
         }
-        //
+        /*
         season = switch (month) {
             case "Deсember", "January", "February" -> Season.WINTER;
             case "Marth", "April", "May" -> Season.SPRING;
@@ -197,6 +197,7 @@ public class AppEnum {
             // case "September", "October", "November" -> Season.AUTUMN;
             default -> Season.AUTUMN;
         };
+        */
         System.out.print("Second = " + season);
         // */
     }
