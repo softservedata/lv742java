@@ -1,6 +1,6 @@
-package com.softserve.edu04;
+package com.softserve.edu03;
 
-public class App04 {
+public class App03 {
     public static void main(String[] args) {
         Person person1 = new Person();
         person1.input("Kostya", "Kozub", 2005);
