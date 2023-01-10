@@ -78,28 +78,29 @@ public class NumberCheck {
     }
 
     public void httpStatusCodeCheck(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the HTTP Error status code: ");
-        int code = scanner.nextInt();
+        try (Scanner scanner = new Scanner(System.in)){
+            System.out.println("Enter the HTTP Error status code: ");
+            int code = scanner.nextInt();
 
-        switch (code){
-            case 400:
-                System.out.println(HTTPError.BAD_REQUEST);
-                break;
-            case 401:
-                System.out.println(HTTPError.UNAUTHORIZED);
-                break;
-            case 402:
-                System.out.println(HTTPError.PAYMENT_REQUIRED);
-                break;
-            case 403:
-                System.out.println(HTTPError.FORBIDDEN);
-                break;
-            case 404:
-                System.out.println(HTTPError.NOT_FOUND);
-                break;
-            default:
-                System.out.println("HTTP Error status code wasn't found.");
+            switch (code){
+                case 400:
+                    System.out.println(HTTPError.BAD_REQUEST);
+                    break;
+                case 401:
+                    System.out.println(HTTPError.UNAUTHORIZED);
+                    break;
+                case 402:
+                    System.out.println(HTTPError.PAYMENT_REQUIRED);
+                    break;
+                case 403:
+                    System.out.println(HTTPError.FORBIDDEN);
+                    break;
+                case 404:
+                    System.out.println(HTTPError.NOT_FOUND);
+                    break;
+                default:
+                    System.out.println("HTTP Error status code wasn't found.");
+            }
         }
     }
 }
