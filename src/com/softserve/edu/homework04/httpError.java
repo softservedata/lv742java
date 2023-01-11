@@ -6,7 +6,7 @@ public enum httpError {
     HTTP_error3("Unauthorized "),
     HTTP_error4("Forbidden"),
     HTTP_error5("Not Found");
-    private String ErrorNumber;
+   final private String ErrorNumber;
 
     httpError(String ErrorNumber) {
         this.ErrorNumber = ErrorNumber;
