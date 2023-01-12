@@ -10,7 +10,8 @@ public class Child extends Parent {
         return 2;
     }
 
-//    public int useF2() {
-//        return useF();
-//    }
+    public int useF2() {
+        //return useF();
+		return f();
+    }
 }
