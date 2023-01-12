@@ -13,6 +13,11 @@ public class CarInteraction {
         Car[] cars = {subaruCrosstrek, hyundaiAccent, fordMustang, hondaOdyssey};
         carCheck(cars);
         sortByYear(cars);
+
+        System.out.println("Sorted cars by years of production.");
+        for (Car car : cars) {
+            System.out.println(car);
+        }
     }
 
     public void carCheck(Car[] cars) {
@@ -44,11 +49,6 @@ public class CarInteraction {
                     cars[j] = temp;
                 }
             }
-        }
-
-        System.out.println("Sorted cars by years of production.");
-        for (Car car : cars) {
-            System.out.println(car);
         }
     }
 }
