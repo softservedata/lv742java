@@ -1,7 +1,7 @@
 package com.softserve.edu.hm4.p1;
 
 public class Math {
-    static boolean belongToRange(double startRange, double finishRange, double parameter) {
+    public static boolean belongToRange(double startRange, double finishRange, double parameter) {
         if (parameter >= startRange && parameter <= finishRange) {
             return true;
         } else {
@@ -9,7 +9,7 @@ public class Math {
         }
     }
 
-    static int max(int mass[])
+    public static int max(int mass[])
     {
         int max = mass[0];
         for (int i = 0; i < mass.length; i++) {
@@ -18,7 +18,7 @@ public class Math {
         return max;
     }
 
-    static int min(int mass[])
+    public static int min(int mass[])
     {
         int min = mass[0];
         for (int i = 0; i < mass.length; i++) {

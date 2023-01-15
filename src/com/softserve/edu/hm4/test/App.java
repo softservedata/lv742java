@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class App {
     static public void main(String[] str) {
-        byte b = (byte) 0x81;
+        /*byte b = (byte) 0x81;
         System.out.println(b);
         Scanner sc = new Scanner(System.in);
         var rez = switch (sc.nextInt()) {
@@ -13,6 +13,8 @@ public class App {
             default -> "error";
         };
         System.out.println(rez);
-        sc.close();
+        sc.close();*/
+        int x = 3;
+        System.out.println(""+(x % 2 == 1 ? --x : x + 2));
     }
 }
