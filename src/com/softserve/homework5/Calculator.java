@@ -6,7 +6,81 @@ public class Calculator {
         int input = InputReader.readMonth();
         int[] monthDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         int monthDay = monthDays[input - 1];
-        System.out.println(monthDay);
+        InputWriter.writeMonthDays(monthDay);
+    }
+
+    public static void getSumOrProduct() {
+        int[] nums = InputReader.read10Integers();
+        int sum = 0;
+        int positiveCount = 0;
+        int product = 1;
+        for (int i = 0; i < nums.length / 2; i++) {
+            if (nums[i] > 0) {
+                positiveCount++;
+            }
+        }
+        for (int i = 0; i < nums.length / 2; i++) {
+            if (positiveCount == 5) {
+                sum = sum + nums[i];
+            }
+        }
+        for (int j = 5; j < nums.length; j++) {
+            if (positiveCount != 5) {
+                product = product * nums[j];
+            }
+        }
+        InputWriter.writeSumOrProduct(sum, product);
+    }
+
+    public static void process5Numbers() {
+        int[] nums = InputReader.read5Integers();
+        InputWriter.writeSecondPositiveNumberPosition(getPositiveNumPosition(nums));
+        getMinNumWithPosition(nums);
+        InputWriter.writeEvenNumsProduct(getEvenNumsProduct(nums));
+    }
+
+
+    private static int getPositiveNumPosition(int[] nums) {
+        int positiveNum = 0;
+        int i = 0;
+        while (i < nums.length) {
+            if (nums[i] > 0) {
+                positiveNum++;
+            }
+            if (positiveNum == 2) {
+                return i + 1;
+            }
+            i++;
+        }
+        throw new RuntimeException("Not enough positive numbers in the array");
+    }
+
+    private static void getMinNumWithPosition(int[] nums) {
+        int min = nums[0];
+        int index = 0;
+        int i = 0;
+        while (i < nums.length) {
+            if (nums[i] < min) {
+                min = nums[i];
+                index = i;
+            }
+            i++;
+        }
+        InputWriter.writeMinNumWithPosition(min, index);
+    }
+
+    private static int getEvenNumsProduct(int[] nums) {
+        int product = 1;
+        for (int num : nums) {
+            if (num % 2 == 0) {
+                product = product * num;
+            }
+        }
+        if (product != 1) {
+            return product;
+        } else {
+            throw new RuntimeException("No even numbers found");
+        }
     }
 
 }
