@@ -2,15 +2,12 @@ package com.softserve.homework5;
 
 public class Calculator {
 
-    public static void matchMonthDays() {
-        int input = InputReader.readMonth();
+    public int matchMonthDays(int input) {
         int[] monthDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        int monthDay = monthDays[input - 1];
-        InputWriter.writeMonthDays(monthDay);
+        return monthDays[input - 1];
     }
 
-    public static void getSumOrProduct() {
-        int[] nums = InputReader.read10Integers();
+    public int getSumOrProduct(int[] nums) {
         int sum = 0;
         int positiveCount = 0;
         int product = 1;
@@ -29,18 +26,14 @@ public class Calculator {
                 product = product * nums[j];
             }
         }
-        InputWriter.writeSumOrProduct(sum, product);
+        if (positiveCount == 5) {
+            return sum;
+        } else {
+            return product;
+        }
     }
 
-    public static void process5Numbers() {
-        int[] nums = InputReader.read5Integers();
-        InputWriter.writeSecondPositiveNumberPosition(getPositiveNumPosition(nums));
-        getMinNumWithPosition(nums);
-        InputWriter.writeEvenNumsProduct(getEvenNumsProduct(nums));
-    }
-
-
-    private static int getPositiveNumPosition(int[] nums) {
+    public int getPositiveNumPosition(int[] nums) {
         int positiveNum = 0;
         int i = 0;
         while (i < nums.length) {
@@ -55,21 +48,20 @@ public class Calculator {
         throw new RuntimeException("Not enough positive numbers in the array");
     }
 
-    private static void getMinNumWithPosition(int[] nums) {
+
+    public int getMinNum(int[] nums) {
         int min = nums[0];
-        int index = 0;
         int i = 0;
         while (i < nums.length) {
             if (nums[i] < min) {
                 min = nums[i];
-                index = i;
             }
             i++;
         }
-        InputWriter.writeMinNumWithPosition(min, index);
+        return min;
     }
 
-    private static int getEvenNumsProduct(int[] nums) {
+    public int getEvenNumsProduct(int[] nums) {
         int product = 1;
         for (int num : nums) {
             if (num % 2 == 0) {

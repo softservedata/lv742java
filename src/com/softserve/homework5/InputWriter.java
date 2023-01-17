@@ -1,31 +1,53 @@
 package com.softserve.homework5;
 
+import java.util.Arrays;
+
 public class InputWriter {
-    public static void writeSumOrProduct(int sum, int product) {
-        if (sum != 0) {
-            System.out.println("The sum is " + sum);
-        } else {
-            System.out.println("The product is " + product);
+
+    private final Calculator calculator = new Calculator();
+
+    public void writeMatchMonthDays() {
+        int input = InputReader.readMonth();
+        int monthDays = calculator.matchMonthDays(input);
+        System.out.println("The month number " + input + " has " + monthDays + " days");
+    }
+
+    public void write3calculations() {
+        System.out.println("Enter 5 integers...");
+        int[] nums = InputReader.read5Integers();
+        writePositiveNumPosition(nums);
+        writeMinNum(nums);
+        writeEvenNumsProduct(nums);
+    }
+
+    public void writeSumOrProduct() {
+        System.out.println("Enter 10 integers...");
+        int[] nums = InputReader.read10Integers();
+        int result = calculator.getSumOrProduct(nums);
+        System.out.println("The result is " + result);
+    }
+
+    private void writePositiveNumPosition(int[] nums ) {
+        int positiveNumPosition = calculator.getPositiveNumPosition(nums);
+        System.out.println("The position of the second positive number is " + positiveNumPosition);
+    }
+
+    private void writeMinNum(int[] nums ) {
+        int minNum = calculator.getMinNum(nums);
+        int minNumIndex = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if(minNum == nums[i]) {
+                minNumIndex = i;
+            }
         }
+        System.out.println("The min num is " + minNum + " in position " + (minNumIndex + 1));
+
     }
 
-    public static void writeMonthDays(int monthDay) {
-        System.out.println(monthDay);
+    private void writeEvenNumsProduct(int[] nums ) {
+        int product = calculator.getEvenNumsProduct(nums);
+        System.out.println("The product of all even numbers is " +  product);
     }
-
-    public static void writeSecondPositiveNumberPosition(int position) {
-        System.out.println("The position of the second positive number is " + position);
-    }
-
-    public static void writeMinNumWithPosition(int min, int index) {
-        System.out.print("The min number is " + min);
-        System.out.println(", the position in array is " + (index + 1));
-    }
-
-    public static void writeEvenNumsProduct(int product) {
-        System.out.println("The product of even numbers is " + product);
-    }
-
 
 
 
