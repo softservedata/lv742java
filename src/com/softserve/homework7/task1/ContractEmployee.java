@@ -1,4 +1,4 @@
-package com.softserve.homework7;
+package com.softserve.homework7.task1;
 
 public class ContractEmployee extends Employee implements Payment, Comparable<ContractEmployee> {
 

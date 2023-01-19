@@ -1,6 +1,6 @@
-package com.softserve.homework7;
+package com.softserve.homework7.task1;
 
-public class App {
+public class EmployeeApp {
 
     public static void main(String[] args) {
         EmployeeService employeeService = new EmployeeService();
