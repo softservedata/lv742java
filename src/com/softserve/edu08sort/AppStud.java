@@ -35,16 +35,16 @@ public class AppStud {
 		//Arrays.sort(students, new Student.ByNameAndAge());
 		//Arrays.sort(students, new Student.ByNameAndAge());
 		//
-		Collections.sort(students);
+//		Collections.sort(students);
 		//Collections.sort(students, new Student.ByNameAndAge());
 		//students.sort(new Student.ByDestName());
-//		Collections.sort(students, new Comparator<Student>() {
-//					@Override
-//					public int compare(Student st1, Student st2) {
-//						return st1.getAge() - st2.getAge();
-//					}
-//				}
-//		);
+		Collections.sort(students, new Comparator<Student>() {
+				@Override
+					public int compare(Student st1, Student st2) {
+						return st1.getAge() - st2.getAge();
+					}
+				}
+		);
 		//
 		//System.out.println("Sorted Arrays: " + Arrays.toString(students));
 		System.out.println("Sorted Arrays: " + students);
