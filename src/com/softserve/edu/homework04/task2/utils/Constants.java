@@ -6,7 +6,7 @@ public class Constants {
     public static final String AGE_INPUT_MSG = "\tEnter the dog's age: ";
     public static final String BREED_CHOOSE_MSG = """
             \tSelect and enter the dog's breed number:
-            \t1. Beagle 
+            \t1. Beagle
             \t2. Labrador
             \t3. German shepherd 
             \t4. Bulldog
