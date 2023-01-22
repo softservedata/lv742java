@@ -1,6 +1,6 @@
 package com.softserve.edu.hm6.p1;
 
-public class Chicken extends FlyingBird {
+public class Chicken extends NonFlyingBird {
     public Chicken() {
         super(true, true);
     }
