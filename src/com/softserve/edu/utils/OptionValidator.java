@@ -1,10 +1,10 @@
-package com.softserve.edu.homework05.array.utils;
+package com.softserve.edu.utils;
 
 import com.softserve.edu.homework05.array.utils.Constants;
 
 import java.util.Scanner;
 
-public class Validator {
+public class OptionValidator {
 
     public static int validateOption(Scanner scan, int[] arrOption) {
 

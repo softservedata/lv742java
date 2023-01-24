@@ -2,7 +2,7 @@ package com.softserve.edu.homework05.array.views;
 
 import com.softserve.edu.homework05.array.utils.ArrayCreateValidator;
 import com.softserve.edu.homework05.array.utils.NumberValidator;
-import com.softserve.edu.homework05.array.utils.Validator;
+import com.softserve.edu.utils.OptionValidator;
 
 import java.util.Scanner;
 
@@ -21,7 +21,7 @@ public class View {
                 0. Close app
                 --------------------------------------
                 """);
-        return Validator.validateOption(scan, options1);
+        return OptionValidator.validateOption(scan, options1);
     }
 
     public int chooseSecondOption() {
@@ -39,7 +39,7 @@ public class View {
                 0. Close app
                 -----------------------------------------------------------------
                 """);
-        return Validator.validateOption(scan, options2);
+        return OptionValidator.validateOption(scan, options2);
     }
 
     public int[] createArr() {
@@ -79,7 +79,7 @@ public class View {
                     11.	November
                     12.	December
                     """);
-            return Validator.validateOption(scan, month);
+            return OptionValidator.validateOption(scan, month);
         }
 
         public void getOutput(String output) {
