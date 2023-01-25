@@ -3,9 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    //создаем объект Scanner для чтения ввода с консоли и используем цикл for,
-    // чтобы предложить пользователю ввести целочисленное значение 10 раз.
-    // Каждое введенное значение добавляется в список «myCollection» с помощью метода add().
+
     public static void main(String[] args) {
         ArrayList<Integer> myCollection = new ArrayList<Integer>();
         ArrayList<Integer> list1 = new ArrayList<Integer>();
