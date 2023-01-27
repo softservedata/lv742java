@@ -24,7 +24,7 @@ public class CollectionEditor {
             if (nums.get(i) > 5) {
                 newCollection.add(i);
             }
-            if(nums.get(i)<=5) {
+            if (nums.get(i) <= 5) {
                 counter++;
             }
         }
@@ -37,35 +37,32 @@ public class CollectionEditor {
 
     public void removeElements(List<Integer> nums) {
         int counter = 0;
-        for (int i = nums.size()-1; i >= 0; i--) {
-            if(nums.get(i) >= 20) {
+        for (int i = nums.size() - 1; i >= 0; i--) {
+            if (nums.get(i) >= 20) {
                 nums.remove(i);
                 counter++;
             }
         }
-        if(nums.size() == 0) {
+        if (nums.size() == 0) {
             System.out.println("List is empty: all numbers are greater than 20");
-        }
-         else if(counter == 0) {
+        } else if (counter == 0) {
             System.out.println("No number greater than 20 found");
-        }
-        else {
+        } else {
             System.out.println("After removing numbers greater than 20: " + nums);
         }
 
     }
 
     public void insertElements(List<Integer> nums) {
-        if(nums.size() > 8) {
+        if (nums.size() > 8) {
             nums.set(1, 1);
-            nums.set(7,-3);
+            nums.set(7, -3);
             nums.set(4, -4);
             System.out.println("New numbers have been inserted: ");
             for (int i = 0; i < nums.size(); i++) {
-                System.out.println("position - " + (i+1) + ", value of element - " + nums.get(i));
+                System.out.println("position - " + (i + 1) + ", value of element - " + nums.get(i));
             }
-        }
-        else if(nums.size() < 8) {
+        } else if (nums.size() < 8) {
             System.out.println("Impossible to insert numbers: index out of array list size");
         }
 
