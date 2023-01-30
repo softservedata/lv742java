@@ -107,19 +107,6 @@ public class MyCollection {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        MyCollection that = (MyCollection) o;
-        return Objects.equals(myCollection, that.myCollection);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(myCollection);
-    }
-
-    @Override
     public String toString() {
         return myCollection.toString();
     }
