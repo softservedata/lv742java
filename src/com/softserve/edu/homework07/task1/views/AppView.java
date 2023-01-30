@@ -1,4 +1,4 @@
-package com.softserve.edu.homework07.views;
+package com.softserve.edu.homework07.task1.views;
 
 import com.softserve.edu.utils.OptionValidator;
 

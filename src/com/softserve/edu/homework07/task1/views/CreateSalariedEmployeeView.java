@@ -1,7 +1,6 @@
-package com.softserve.edu.homework07.views;
+package com.softserve.edu.homework07.task1.views;
 
-import com.softserve.edu.homework07.models.ContractEmployee;
-import com.softserve.edu.homework07.models.SalariedEmployee;
+import com.softserve.edu.homework07.task1.models.SalariedEmployee;
 import com.softserve.edu.utils.NumberValidator;
 import com.softserve.edu.utils.StringValueValidator;
 

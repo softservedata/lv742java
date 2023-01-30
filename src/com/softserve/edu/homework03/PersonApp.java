@@ -1,4 +1,5 @@
 package src.com.softserve.edu.homework03;
+import src.com.softserve.edu.homework03.Person;
 
 public class PersonApp {
 
@@ -6,7 +7,7 @@ public class PersonApp {
     public static void main(String[] args) {
         Person p1 = new Person("Ivan", "Ivanov");
         p1.setBirthYear(1999);
-        Person p2 = new Person("Petro", "Petrov");
+        src.com.softserve.edu.homework03.Person p2 = new Person("Petro", "Petrov");
         p2.setBirthYear(2002);
         Person p3 = new Person("Adriana", "Fedoriv");
         p3.setBirthYear(1995);

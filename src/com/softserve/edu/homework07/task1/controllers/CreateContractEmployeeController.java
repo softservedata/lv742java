@@ -1,9 +1,7 @@
-package com.softserve.edu.homework07.controllers;
+package com.softserve.edu.homework07.task1.controllers;
 
-import com.softserve.edu.homework07.AppStarter;
-import com.softserve.edu.homework07.models.ContractEmployee;
-import com.softserve.edu.homework07.models.Employee;
-import com.softserve.edu.homework07.views.CreateContractEmployeeView;
+import com.softserve.edu.homework07.task1.models.ContractEmployee;
+import com.softserve.edu.homework07.task1.views.CreateContractEmployeeView;
 
 public class CreateContractEmployeeController {
     ContractEmployee model;

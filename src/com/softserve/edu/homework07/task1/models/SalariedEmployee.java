@@ -1,4 +1,4 @@
-package com.softserve.edu.homework07.models;
+package com.softserve.edu.homework07.task1.models;
 
 import com.softserve.edu.utils.Rounder;
 

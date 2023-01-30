@@ -1,12 +1,12 @@
-package com.softserve.edu.homework07.models;
+package com.softserve.edu.homework07.task1.models;
 
-import com.softserve.edu.homework07.controllers.CreateContractEmployeeController;
-import com.softserve.edu.homework07.controllers.CreateSalariedEmployeeController;
-import com.softserve.edu.homework07.controllers.SortListByLastNameController;
-import com.softserve.edu.homework07.controllers.SortListBySalaryController;
-import com.softserve.edu.homework07.views.AppView;
-import com.softserve.edu.homework07.views.CreateContractEmployeeView;
-import com.softserve.edu.homework07.views.CreateSalariedEmployeeView;
+import com.softserve.edu.homework07.task1.controllers.CreateContractEmployeeController;
+import com.softserve.edu.homework07.task1.controllers.CreateSalariedEmployeeController;
+import com.softserve.edu.homework07.task1.controllers.SortListByLastNameController;
+import com.softserve.edu.homework07.task1.controllers.SortListBySalaryController;
+import com.softserve.edu.homework07.task1.views.AppView;
+import com.softserve.edu.homework07.task1.views.CreateContractEmployeeView;
+import com.softserve.edu.homework07.task1.views.CreateSalariedEmployeeView;
 
 import java.util.ArrayList;
 

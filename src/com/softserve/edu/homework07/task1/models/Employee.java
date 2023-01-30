@@ -1,16 +1,15 @@
-package com.softserve.edu.homework07.models;
+package com.softserve.edu.homework07.task1.models;
 
 import java.util.Comparator;
 import java.util.Objects;
 
-public class Employee implements Comparable<Employee>, Payment{
+public class Employee implements Comparable<Employee>, Payment {
 
     private String employeeId;
     private String firstName;
     private String lastName;
 
     public Employee() {
-
     }
 
     public Employee(String employeeId, String firstName, String lastName) {
@@ -90,4 +89,5 @@ public class Employee implements Comparable<Employee>, Payment{
             return (int) (o2.calculatePay() - o1.calculatePay());
         }
     }
+
 }

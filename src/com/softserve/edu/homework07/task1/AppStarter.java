@@ -1,8 +1,8 @@
-package com.softserve.edu.homework07;
+package com.softserve.edu.homework07.task1;
 
-import com.softserve.edu.homework07.controllers.AppController;
-import com.softserve.edu.homework07.models.AppModel;
-import com.softserve.edu.homework07.views.AppView;
+import com.softserve.edu.homework07.task1.controllers.AppController;
+import com.softserve.edu.homework07.task1.models.AppModel;
+import com.softserve.edu.homework07.task1.views.AppView;
 
 public class AppStarter {
     public static void appStart() {

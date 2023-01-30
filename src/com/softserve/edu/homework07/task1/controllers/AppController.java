@@ -1,15 +1,14 @@
-package com.softserve.edu.homework07.controllers;
+package com.softserve.edu.homework07.task1.controllers;
 
 
-import com.softserve.edu.homework07.models.AppModel;
-import com.softserve.edu.homework07.views.AppView;
+import com.softserve.edu.homework07.task1.models.AppModel;
+import com.softserve.edu.homework07.task1.views.AppView;
 
 public class AppController {
     AppModel model;
     AppView view;
 
     public AppController(AppModel model, AppView view) {
-        //this.createModel = createModel;
         this.model = model;
         this.view = view;
     }

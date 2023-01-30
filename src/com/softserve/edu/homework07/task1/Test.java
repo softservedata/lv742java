@@ -1,4 +1,4 @@
-package com.softserve.edu.homework07;
+package com.softserve.edu.homework07.task1;
 
 public class Test {
     public static void main(String[] args) {
