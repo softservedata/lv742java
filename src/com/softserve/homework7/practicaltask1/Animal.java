@@ -1,4 +1,4 @@
-package com.softserve.homework7.practicaltask;
+package com.softserve.homework7.practicaltask1;
 
 public interface Animal {
 

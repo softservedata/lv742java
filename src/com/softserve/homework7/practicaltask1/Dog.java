@@ -1,16 +1,16 @@
-package com.softserve.homework7.practicaltask;
+package com.softserve.homework7.practicaltask1;
 
-public class Cat implements Animal, Comparable<Cat>, Cloneable {
+public class Dog implements Animal, Comparable<Dog>, Cloneable {
 
     private String name;
     private int age;
 
-    public Cat(String name, int age) {
+    public Dog(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    public Cat() {
+    public Dog() {
     }
 
     public String getName() {
@@ -32,12 +32,12 @@ public class Cat implements Animal, Comparable<Cat>, Cloneable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Cat)) return false;
+        if (!(o instanceof Dog)) return false;
 
-        Cat cat = (Cat) o;
+        Dog dog = (Dog) o;
 
-        if (getAge() != cat.getAge()) return false;
-        return getName() != null ? getName().equals(cat.getName()) : cat.getName() == null;
+        if (getAge() != dog.getAge()) return false;
+        return getName() != null ? getName().equals(dog.getName()) : dog.getName() == null;
     }
 
     @Override
@@ -49,16 +49,16 @@ public class Cat implements Animal, Comparable<Cat>, Cloneable {
 
     @Override
     public void voice() {
-        System.out.println("Meow, meow!");
+        System.out.println("Ruf,ruf!");
     }
 
     @Override
     public void feed() {
-        System.out.println("Feeding a cat...");
+        System.out.println("Feeding a dog...");
     }
 
     @Override
-    public int compareTo(Cat o) {
+    public int compareTo(Dog o) {
         return getName().compareTo(o.getName());
     }
 
@@ -69,7 +69,7 @@ public class Cat implements Animal, Comparable<Cat>, Cloneable {
 
     @Override
     public String toString() {
-        return "Cat{" +
+        return "Dog{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
