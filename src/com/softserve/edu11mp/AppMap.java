@@ -3,11 +3,13 @@ package com.softserve.edu11mp;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class AppMap {
 	public static void main(String[] args) {
 		Map<Object, String> map = new HashMap<>();
 		// Map<Object, String> map = new TreeMap<>(new MyComp());
+		//Map<Object, String> map = new TreeMap<>();
 		map.put("key1", "one");
 		map.put(new Object(), "two");
 		map.put(1, "3");
@@ -17,12 +19,12 @@ public class AppMap {
 		map.put(null, "is_second_null");
 		System.out.println("next map = " + map);
 		//
-		/*-
+		// /*-
 		System.out.println("First");
 		for (Map.Entry<Object, String> entry : map.entrySet()) {
 			System.out.println("key = " + entry.getKey() + " value = " + entry.getValue());
 		}
-		*/
+		// */
 		// /*-
 		String res = map.remove(1);
 		System.out.println("res = " + res);
