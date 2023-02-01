@@ -1,4 +1,4 @@
-package com.softserve.homework10;
+package com.softserve.homework10.task1;
 
 public class CollectionApp {
 
