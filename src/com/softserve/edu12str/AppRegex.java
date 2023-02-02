@@ -11,20 +11,21 @@ public class AppRegex {
 	public static void main(String[] args) {
 		//String pattern = "Now is the time";
 		//String pattern = "[ Na-z]+";
+		//String pattern = "[ A-Za-z0-9]+";
 		//String pattern = "[a-z]+";
 		//String text = "Now is the time";
 		//
 		//String pattern ="[bt]{2}";
 		//String pattern ="(\\w)\\1"; // Java String: \\ -> \
 		//String pattern = "\\b\\w*([\\w])\\1\\w*\\b";
-		//String text = "letter abba work abtc";
+		//String text = "letter abba work abtcc";
 		//
 		/*-
 		//String pattern = "<.+>";
 		//String pattern = "<[^>]+>"; // All tags
 		//String pattern = ">[^><]+<"; // All text
-		String pattern = "<([^>]+)>[^><]+</\\1>"; // \1 == group(1)
-		String text = "<p><b>Beginning with bold text</b> next, <span>text</span> body,<i>italic text</i> end of text.</p>";
+		//String pattern = "<([^>]+)>[^><]+</\\1>"; // \1 == group(1)
+		//String text = "<p><b>Beginning with bold text</b> next, <span>text</span> body,<i>italic text</i> end of text.</p>";
 		*/
 		//
 		//String pattern = "\\w+(\\.\\w+)*@(\\w+\\.)+\\w{2,}";
@@ -32,7 +33,7 @@ public class AppRegex {
 		//String text = "a.bd.c@gmail.com";
 		//String text = "a.b.c@gmail.com a@i.ua a.@gmail.com a@gmail.a";
 		//
-		// String pattern = "\\b(\\d{1,3}[,'])*\\d{1,3}\\.\\d{2}\\b";
+		//String pattern = "\\b(\\d{1,3}[,'])*\\d{1,3}\\.\\d{2}\\b";
 		//String pattern = "\\b\\d{1,3}([,'`]\\d{3})*\\.\\d{2}\\b";
 		//String text = "4 item(s) - $1'111,450.40 text";
 		//
@@ -63,7 +64,7 @@ public class AppRegex {
 			*/
 			System.out.println("grop1 = " + m.group(1));
 			//
-			//System.out.print(text.substring(m.start(), m.end()) + "*");
+			System.out.print(text.substring(m.start(), m.end()) + "*");
 			//System.out.print(text.substring(m.start() + 1, m.end() - 1).trim() + "*");
 			//list.add(text.substring(m.start(), m.end()));
 		}
@@ -75,6 +76,6 @@ public class AppRegex {
 			//System.out.printf("(price+1) = %.2f",(price + 1));
 		}
 		*/
-
+		//System.out.println(list);
 	}
 }
