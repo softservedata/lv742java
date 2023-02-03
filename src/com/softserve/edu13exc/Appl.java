@@ -27,6 +27,9 @@ public class Appl {
 		} catch (ArithmeticException e) {
 			System.out.println("ArithmeticException");
 			//System.exit(0);
+//			if (true) {
+//				throw new RuntimeException("hahaha");
+//			}
 			return -2;
 		} catch (Exception e) {
 			System.out.println("Exception");
@@ -42,6 +45,8 @@ public class Appl {
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			} finally {
+				System.out.println("finally-2");
 			}
 		}
 	}
@@ -79,7 +84,7 @@ public class Appl {
 		System.out.println("Statr");
 		try {
 			mySleep(2000);
-			System.out.println("div = " + div2());
+			System.out.println("div = " + div());
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			// e.printStackTrace();

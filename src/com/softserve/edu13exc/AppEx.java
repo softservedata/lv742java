@@ -14,8 +14,13 @@ public class AppEx {
         try {
             result = safeSqrt(x);
         } catch (ArithmeticException e) {
-            System.out.println("Error Founded = " + e);
+            System.err.println("Error Founded = " + e);
             result = -1;
+        }
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
         System.out.println("result: " + result);
         return result;

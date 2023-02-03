@@ -23,14 +23,14 @@ public class ApplStack {
 	}
 
 	public static void main(String[] args) {
-		// method1();
+		//method1();
 		try {
 			method1();
-		} catch (Exception e) {
+		} catch (MyException e) {
 			// System.err.println(e.getMessage() + "\n");
 			System.out.println(e.getMessage() + "\n");
 			e.printStackTrace();
 		}
-
+		System.out.println("DONE");
 	}
 }
