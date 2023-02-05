@@ -20,11 +20,15 @@ public class AppController {
         choose1(viewApp.chooseOption1());
     }
 
-    public void choose1(int n) throws InterruptedException {
+    public void choose1(int n){
         switch (n) {
             case 1:
                 model.processRandomCollection();
-                TimeUnit.SECONDS.sleep(1);
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 choose3(viewApp.chooseOption3());
                 break;
             case 2:
