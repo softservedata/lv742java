@@ -4,7 +4,7 @@ public class SentenceService {
 
     public String convertSentence(String str) {
 
-        return str.replaceAll("[\\s]+", " ");
+        return str.replaceAll("\s+", " ");
 
     }
 }
