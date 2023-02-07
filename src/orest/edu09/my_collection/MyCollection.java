@@ -17,7 +17,7 @@ public class MyCollection {
                 + copyFirstPartInDirectOrder(myCollection) + "\n");
 
         System.out.println("Copy second part of list in reverse order: \n"
-                + copySecondPartInReversrOrder(myCollection) + "\n");
+                + copySecondPartInReverseOrder(myCollection) + "\n");
 
         System.out.println("Replaced min max list: \n"
                 + replaceMinMax(myCollection) + "\n");
@@ -81,7 +81,7 @@ public class MyCollection {
         return list1;
     }
 
-    private static List<Integer> copySecondPartInReversrOrder(List<Integer> myCollection) {
+    private static List<Integer> copySecondPartInReverseOrder(List<Integer> myCollection) {
         List<Integer> list2 = myCollection.subList(myCollection.size() / 2, myCollection.size());
         list2.sort(Collections.reverseOrder());
         return list2;
