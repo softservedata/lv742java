@@ -30,11 +30,12 @@ public class ApplFunction {
 		Predicate<String> predicate = name -> name.startsWith("A");
 		System.out.println("Origin: " + names);
 		List<String> namesWithA = names.stream()
-				//.filter(name -> name.startsWith("A"))
-				.filter(predicate)
+				.filter(name -> name.startsWith("A"))
+				//.filter(predicate)
 				.filter(predicate1)
 				.collect(Collectors.toList());
 		System.out.println("Modify: " + namesWithA);
+		System.out.println("Origin: " + names);
 		*/
 		/*-
 		Function<String, Integer> stringToInt = x -> Integer.valueOf(x);
@@ -59,6 +60,8 @@ public class ApplFunction {
 //		for (String current : names) {
 //			names2.add(current.toUpperCase());
 //		}
+//		System.out.println("Updated List = " + names2);
+		//
 		// names.clear();
 		// names.addAll(names2);
 //		names = new ArrayList<>(names2);

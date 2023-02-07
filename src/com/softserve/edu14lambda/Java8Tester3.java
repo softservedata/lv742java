@@ -17,6 +17,7 @@ public class Java8Tester3 {
 //			System.out.print(names.get(i) + "  ");
 //		}
         //
-        names.forEach(System.out::println);
+        //names.forEach(System.out::println);
+        names.forEach(x->System.out.println(x));
     }
 }
