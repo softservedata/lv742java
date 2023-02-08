@@ -30,6 +30,7 @@ public class MyHashMap {
 
         System.out.println();
         System.out.println("Map contains duplicate values = " + duplicateCheck(personMap) + ".");
+        System.out.println();
     }
 
     public static boolean duplicateCheck(Map<String, String> personMap) {

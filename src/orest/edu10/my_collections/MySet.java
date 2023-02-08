@@ -9,7 +9,11 @@ public class MySet {
         Set<Integer> set1 = new HashSet<>(List.of(0, 1, 2, 3, 4, 5, 7));
         Set<Integer> set2 = new HashSet<>(List.of(5, 6, 7, 8, 9, 0, 4));
 
+        System.out.println("Set union.");
         System.out.println(union(set1, set2));
+        System.out.println();
+
+        System.out.println("Set intersect.");
         System.out.println(intersect(set1, set2));
     }
 
