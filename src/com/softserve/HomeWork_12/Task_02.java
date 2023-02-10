@@ -29,7 +29,7 @@ public class Task_02 {
 
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
-            System.out.println(Task_02.readNumber(0, 100));
+            System.out.println(Task_02.readNumber(1, 100));
         }
     }
 }
