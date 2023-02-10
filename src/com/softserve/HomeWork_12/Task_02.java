@@ -13,7 +13,7 @@ public class Task_02 {
         } catch (InputMismatchException e) {
             System.err.println("The input data is incorrect. Try again.");
             return -1;
-        } catch (Error e) {
+        } catch (Exception e) {
             System.err.println("ERROR: " + e);
             return -1;
         }
