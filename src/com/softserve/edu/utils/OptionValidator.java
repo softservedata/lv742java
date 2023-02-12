@@ -10,16 +10,16 @@ public class OptionValidator {
 
         while (!scan.hasNextInt()) {
             String string = scan.nextLine().trim();
-            System.out.printf(Constants.NON_INT_MSG, string);
+            System.out.printf("\"%s\" - not a number!%nTry again: ", string);
         }
 
         int caseOption = scan.nextInt();
 
         while (!contains(arrOption, caseOption)) {
-            System.out.print(Constants.NON_CASE_VALUE_MSG);
+            System.out.print("Unexpected value. Try again: ");
             while (!scan.hasNextInt()) {
                 String string = scan.next().trim();
-                System.out.printf(Constants.NON_INT_MSG, string);
+                System.out.printf("\"%s\" - not a number!%nTry again: ", string);
             }
             caseOption = scan.nextInt();
         }
