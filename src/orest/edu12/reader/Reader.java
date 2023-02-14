@@ -33,18 +33,18 @@ public class Reader {
         }
     }
 
-    private static int readNumber(int start, int end) throws Exception {
+    private static int readNumber(int start, int end) {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.printf("Enter a number between %d and %d: ", start, end);
             String input = scanner.nextLine();
             try {
                 int number = Integer.parseInt(input);
                 if (number < start || number > end) {
-                    throw new Exception("Number is out of range");
+                    throw new IllegalArgumentException("Number is out of range");
                 }
                 return number;
             } catch (NumberFormatException e) {
-                throw new Exception("Invalid input: not a number");
+                throw new IllegalArgumentException("Invalid input: not a number");
             }
         }
     }
