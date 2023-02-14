@@ -6,6 +6,7 @@ import java.util.Set;
 
 public class AppSet {
     public static void main(String[] args) {
+        /*
         Set<String> set = new HashSet<>();
         List<String> list = List.of("First", "Second");
         //
@@ -38,6 +39,6 @@ public class AppSet {
         for (String object : set) {
             System.out.println(object);
         }
-
+        */
     }
 }

@@ -59,7 +59,7 @@ public class ApplList {
 		lstStr.add(new Student(233, "Petro"));
 		System.out.println("Original: lstStr = " + lstStr);
 		*/
-		//
+		/*
 		List<Student> lstStr1 = List.of(new Student(232, "Petro"),
 				new Student(143, "Stepan"),
 				new Student(234, "Petro"),
@@ -80,6 +80,6 @@ public class ApplList {
 		lstStr.add(1, st1);
 		System.out.println("\nUpdated: lstStr = " + lstStr);
 		System.out.println("Element from 1 position: " + lstStr.get(1));
-		//  */
+		*/
     }
 }
