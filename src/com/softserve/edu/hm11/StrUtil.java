@@ -3,17 +3,29 @@ package com.softserve.edu.hm11;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 public class StrUtil {
     public static String enterSentence() {
+        /*
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter sentence: ");
         String sentence = sc.nextLine();
         sc.close();
         return sentence;
+        */
+
+        //refactoring with try/catch
+        System.out.print("Enter sentence: ");
+        try (Scanner sc = new Scanner(System.in)) {
+            return sc.nextLine();
+        }
+        catch (NoSuchElementException | IllegalStateException e) {
+            return "";
+        }
     }
 
-    public static List<String> parseString(String text) {
+    public static List<String> parseString(String text) throws PatternSyntaxException, IndexOutOfBoundsException {
         String temp = "\\b(\\w+)\\b";
         Pattern p = Pattern.compile(temp);
         Matcher m = p.matcher(text);
@@ -24,8 +36,8 @@ public class StrUtil {
         return list;
     }
 
-    public static List<String> parseCurrency(String text) {
-        String temp = "\\$[0-9]+\\.[0-9]{2}";
+    public static List<String> parseCurrency(String text) throws PatternSyntaxException, IndexOutOfBoundsException {
+        String temp = "\\$[0-9]+\\.[0-9]{0,2}";
         Pattern p = Pattern.compile(temp);
         Matcher m = p.matcher(text);
         List<String> list = new ArrayList<>();
