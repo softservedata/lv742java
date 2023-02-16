@@ -1,6 +1,8 @@
 package com.softserve.edu18ser;
 
-class Student { //implements Serializable {
+import java.io.Serializable;
+
+class Student implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	protected static String bachelor;
