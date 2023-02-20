@@ -1,5 +1,8 @@
 package com.softserve.edu.hm13;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -77,5 +80,26 @@ public class UtilFuncAndDate {
     public static String decrypt(String s, int n) {
         if (n < 0) return "";
         return moveChars(s, n * -1);
+    }
+
+    public static boolean isDateCorrect(String dateStr, String template) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(template);
+        try {
+            LocalDate parsedDate = LocalDate.parse(dateStr, formatter);
+        } catch (DateTimeParseException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isLeapYear(int year) {
+        if (year <= 0) return false;
+        LocalDate tempDate = LocalDate.now().withYear(year);
+        return tempDate.isLeapYear();
+    }
+
+    public static void printDayOfWeek(LocalDate ld) {
+        System.out.println("Day of the week " + ld.getDayOfWeek() + "(" + ld + ")");
     }
 }
