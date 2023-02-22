@@ -1,0 +1,66 @@
+[public class Person implements Comparable<Person>, Cloneable {
+
+    private FullName fullName;
+    private int age;
+
+    private Person(FullName fullName, int age) {
+        this.fullName = fullName;
+        this.age = age;
+    }
+
+    private FullName getFullName() {
+        return fullName;
+    }
+
+    private void setFullName(FullName fullName) {
+        this.fullName = fullName;
+    }
+
+    private int getAge() {
+        return age;
+    }
+
+    private void setAge(int age) {
+        this.age = age;
+    }
+
+    private String info() {
+        return "The person info is: " + getFullName() + ", " + getAge();
+    }
+
+    private abstract String activity();
+
+    @Override
+    private boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+
+        Person person = (Person) o;
+
+        if (getAge() != person.getAge()) return false;
+        return getFullName() != null ? getFullName().equals(person.getFullName()) : person.getFullName() == null;
+    }
+
+    @Override
+    private int hashCode() {
+        int result = getFullName() != null ? getFullName().hashCode() : 0;
+        result = 31 * result + getAge();
+        return result;
+    }
+
+    @Override
+    private String toString() {
+        return "Person{" +
+                "fullName=" + fullName +
+                ", age=" + age +
+                '}';
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        Person copyOfPerson = (Person) super.clone();
+        copyOfPerson.fullName = (FullName) copyOfPerson.fullName.clone();
+        return copyOfPerson;
+    }
+}
+]
