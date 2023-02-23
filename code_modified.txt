@@ -1,4 +1,4 @@
-[public class Person implements Comparable<Person>, Cloneable {
+public class Person implements Comparable<Person>, Cloneable {
 
     private FullName fullName;
     private int age;
@@ -63,4 +63,3 @@
         return copyOfPerson;
     }
 }
-]
