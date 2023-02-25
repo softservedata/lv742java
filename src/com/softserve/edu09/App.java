@@ -9,13 +9,22 @@ public class App {
         List<Integer> myCollection = new LinkedList<>();
         List<Integer> list1 = new LinkedList<>();
         List<Integer> list2 = new LinkedList<>();
+        int k = 0;
 
-        System.out.print("Please enter k: ");
-        int k = sc.nextInt();
-        System.out.println("Please enter nums to list: ");
+        try {
+            System.out.print("Please enter k: ");
+            k = sc.nextInt();
+        } catch (InputMismatchException ex){
+            System.out.println("Error was found: " + ex);
+        }
 
-        for (int i = 0; i < 10; i++){
-            myCollection.add(sc.nextInt());
+        try {
+            System.out.println("Please enter nums to list: ");
+            for (int i = 0; i < 10; i++){
+                myCollection.add(sc.nextInt());
+            }
+        } catch (InputMismatchException ex){
+            System.out.println("Error was found: " + ex);
         }
 
         // Swap the maximum and minimum elements in the list.
