@@ -1,0 +1,3 @@
+Number of lines in file1.txt: 11
+The longest line in file1.txt: .......\/-_-\/........
+My name and birthday date: Oleksandr Shcherbakov, 25.09.1996
