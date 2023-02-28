@@ -1,40 +1,44 @@
 package com.softserve.edu;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
 
 public class AppTest {
-    @BeforeClass
-    public static void setUpBeforeClass() throws Exception {
-        System.out.println("@BeforeClass setUpBeforeClass()");
+    @BeforeAll
+    public static void setup() {
+        System.out.println("@BeforeAll setup()");
     }
 
-    @AfterClass
-    public static void tearDownAfterClass() throws Exception {
-        System.out.println("@AfterClass tearDownAfterClass()");
+    @AfterAll
+    public static void tear() {
+        System.out.println("@AfterAll tear()");
     }
 
-    @Before
-    public void setUp() throws Exception {
-        System.out.println("\t@Before setUp()");
+    @BeforeEach
+    public void setupThis() {
+        System.out.println("\t@BeforeEach setupThis()");
     }
 
-    @After
-    public void tearDown() throws Exception {
-        System.out.println("\t@After tearDown()");
+    @AfterEach
+    public void tearThis() {
+        System.out.println("\t@AfterEach tearThis()");
     }
 
-    @Test(expected = ArithmeticException.class)
-    public void testException() {
-        System.out.println("\t\t@Test testException()");
-        int i = 0;
-        i = 10 / i;
-        System.out.println("\t\t\ti = " + i);
+    @Test
+    void testExpectedException() {
+        System.out.println("\t\t@Test testExpectedException()");
+        RuntimeException thrown = Assertions.assertThrows(RuntimeException.class, () -> {
+            //Code under test
+            int i = 0;
+            i = 10 / (i + 0);
+        });
+        System.out.println("\t\tMessage = " + thrown.getMessage());
+        Assertions.assertEquals("/ by zero", thrown.getMessage());
     }
 
     @Test
     public void testDemo() {
         System.out.println("\t\t@Test testDemo()");
         //
-        Assert.assertEquals(5, 3 + 2);
+        Assertions.assertEquals(5, 3 + 2);
     }
 }
