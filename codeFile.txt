@@ -1,0 +1,100 @@
+package com.softserve.HomeWork_08;
+
+import java.util.Objects;
+
+private abstract class Person implements Cloneable {
+    private Fullname fullname;
+    private int age;
+
+    private Person(Fullname fullname, int age) {
+        this.fullname = fullname;
+        this.age = age;
+    }
+
+    private String info() {
+        return "First name: <" + fullname.getFirstName() +
+                ">, Last name: <" + fullname.getLastName() +
+                ">, Age: <" + getAge() + ">";
+    }
+
+    private abstract String activity();
+
+    private Fullname getFullname() {
+        return fullname;
+    }
+
+    private void setFullname(Fullname fullname) {
+        this.fullname = fullname;
+    }
+
+    private int getAge() {
+        return age;
+    }
+
+    private void setAge(int age) {
+        this.age = age;
+    }
+
+    private static class Fullname implements Cloneable {
+        private String firstName;
+        private String lastName;
+
+        private Fullname(String firstName, String lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        private String getFirstName() {
+            return firstName;
+        }
+
+        private void setFirstName(String firstName) {
+            this.firstName = firstName;
+        }
+
+        private String getLastName() {
+            return lastName;
+        }
+
+        private void setLastName(String lastName) {
+            this.lastName = lastName;
+        }
+
+        @Override
+        protected Object clone() throws CloneNotSupportedException {
+            return super.clone();
+        }
+
+        @Override
+        private String toString() {
+            return "firstName = " + firstName +
+                    ", lastName = " + lastName;
+        }
+    }
+
+    @Override
+    private boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age && Objects.equals(fullname, person.fullname);
+    }
+
+    @Override
+    private int hashCode() {
+        return Objects.hash(fullname, age);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        Person copyOfPerson = (Person) super.clone();
+        copyOfPerson.fullname = (Fullname) copyOfPerson.fullname.clone();
+        return copyOfPerson;
+    }
+
+    @Override
+    private String toString() {
+        return "Person: " + fullname +
+                ", age = " + age + ".";
+    }
+}

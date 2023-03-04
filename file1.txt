@@ -1,0 +1,3 @@
+My name is Maksym and I am 17 years old.  
+I was born on 05.05.2005.  
+I am studying at "NULP", at the department of artificial intelligence systems, and I am studying Java at the same time.

@@ -7,6 +7,15 @@ public class Person {
     private String lastName;
     private int birthYear;
 
+    //Constructors:
+    public Person() {
+    }
+
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     //Getters:
     public String getFirstName() {
         return firstName;
@@ -20,15 +29,17 @@ public class Person {
         return birthYear;
     }
 
-    //Constructors:
-    public Person() {
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public Person(String firstName, String lastName) {
-        this.firstName = firstName;
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    public void setBirthYear(int birthYear) {
+        this.birthYear = birthYear;
+    }
 
     //Methods:
     public int getAge() {
