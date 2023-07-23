@@ -104,7 +104,7 @@ public class ApplTime {
 		System.out.println("newDateTime = " + newDateTime);
 		*/
 		/*-
-		Period period = Period.of(3, 2, 1);
+		Period period = Period.of(3, 2, 1).minusYears(1).minusMonths(1);
 		System.out.println("period = " + period);
 		LocalDateTime time1 = LocalDateTime.now();
 		LocalDateTime time2 = time1.minus(period);
@@ -113,7 +113,7 @@ public class ApplTime {
 		Duration duration = Duration.between(time2, time1);
 		System.out.println("duration = " + duration);
 		*/
-        // /*-
+        /*-
         LocalDate ofEpochDay = LocalDate.ofEpochDay(0L); // 01.01.1970
         System.out.println("ofEpochDay = " + ofEpochDay);
         //
@@ -139,6 +139,6 @@ public class ApplTime {
         // DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy 'at' hh:mm");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS dd.MM.yyyy");
         System.out.println("localDate.format(formatter): " + localDate.format(formatter));
-        // */
+        */
     }
 }
